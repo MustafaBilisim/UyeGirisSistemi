@@ -34,9 +34,9 @@
             label1 = new Label();
             label2 = new Label();
             groupBox1 = new GroupBox();
+            label3 = new Label();
             checkBox1 = new CheckBox();
             button2 = new Button();
-            label3 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -59,7 +59,7 @@
             // 
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             button1.ForeColor = Color.Red;
-            button1.Location = new Point(126, 169);
+            button1.Location = new Point(126, 170);
             button1.Name = "button1";
             button1.Size = new Size(160, 35);
             button1.TabIndex = 2;
@@ -103,6 +103,16 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Giriş Ekranı";
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(146, 24);
+            label3.Name = "label3";
+            label3.Size = new Size(85, 15);
+            label3.TabIndex = 6;
+            label3.Text = "Yanlış Kullanıcı";
+            label3.Visible = false;
+            // 
             // checkBox1
             // 
             checkBox1.AutoSize = true;
@@ -124,16 +134,6 @@
             button2.Text = "Göster / Gizle";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(146, 24);
-            label3.Name = "label3";
-            label3.Size = new Size(85, 15);
-            label3.TabIndex = 6;
-            label3.Text = "Yanlış Kullanıcı";
-            label3.Visible = false;
             // 
             // Form2
             // 

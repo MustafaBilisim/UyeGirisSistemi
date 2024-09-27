@@ -16,32 +16,50 @@ namespace kullanici_giris
         {
             InitializeComponent();
         }
+        int giris_hakki = 3;
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            
             int hata_oldumu = 0;
 
             if(textBox1.Text != "admin")
             {
                 hata_oldumu = 1;
                 label3.Visible = true;
+                
 
             }
             if(textBox2.Text != "123")
             {
                 hata_oldumu = 1;
+                giris_hakki--;
             }
 
 
 
-
-            if (hata_oldumu == 0)
+            if (giris_hakki > 0)
             {
-                MessageBox.Show("Başarılı");
+
+                if (hata_oldumu == 0)
+                {
+                    MessageBox.Show("Başarılı");
+                }
+                else
+                {
+                    MessageBox.Show("Hatalı, Kalan giriş hakki :" + giris_hakki);
+
+                }
             }
             else
             {
-                MessageBox.Show("Hatalı");
+                button1.Enabled = false;
+                textBox1.Text = "";
+                textBox2.Text = "";
+
+                textBox1.Enabled = false;
+                textBox2.Enabled = false;
             }
 
 
@@ -63,6 +81,7 @@ namespace kullanici_giris
                             else
                             {
                                 MessageBox.Show("Parola Yanlış");
+                                giris_hakki--;
                             }
                         }
                         else
@@ -85,6 +104,7 @@ namespace kullanici_giris
                         else
                         {
                             MessageBox.Show("!! HATALI !!");
+                            giris_hakki--;
                         }
             */
         }
